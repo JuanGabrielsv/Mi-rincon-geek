@@ -229,6 +229,7 @@ body {
     grid-template-rows: auto 1fr 0.1fr;
     height: 100vh;
     background-color: var(--950);
+    color: white;
 }
 
 /************************************ HEADER ************************************/
