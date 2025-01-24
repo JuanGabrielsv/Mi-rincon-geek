@@ -274,8 +274,18 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/*main {
+/***************************** MAIN *****************************/
+
+main {
+    background-color: var(--950);
+}
+
+.section1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 footer {
-}*/
+    background-color: var(--950);
+}

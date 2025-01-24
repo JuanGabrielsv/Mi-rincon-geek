@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     // Función para realizar solicitudes
     async function fetchData(endpoint) {
+
         const response = await fetch(`${BASE_URL}${endpoint}`, options);
         if (!response.ok) {
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
@@ -21,18 +22,82 @@ window.addEventListener('DOMContentLoaded', async () => {
         return response.json();
     }
 
-    // Función principal
     try {
-        // Obtener datos de la película
+        // Obtener película
         const pelicula = await fetchData('/movie/105?language=es-ES');
-        console.log('Datos de la película:', pelicula);
 
         // Mostrar imagen en el DOM
-        const main = document.querySelector('main');
-        const imagen = document.createElement('img');
-        imagen.src = `${URL_IMAGE}${pelicula.poster_path}`;
-        imagen.alt = pelicula.title || 'Póster de la película';
-        main.appendChild(imagen);
+        const section1 = document.getElementById('section1');
+        const div = document.createElement('div');
+        const img = document.createElement('img');
+
+        img.style.borderRadius = '2rem';
+        img.src = `${URL_IMAGE}${pelicula.poster_path}`;
+        img.alt = pelicula.title || 'Póster de la película';
+
+        section1.appendChild(div);
+        div.appendChild(img);
+
+    } catch (error) {
+        console.error('Error en la operación:', error.message);
+    }
+
+    try {
+        // Obtener película
+        const pelicula = await fetchData('/movie/106?language=es-ES');
+
+        // Mostrar imagen en el DOM
+        const section1 = document.getElementById('section1');
+        const div = document.createElement('div');
+        const img = document.createElement('img');
+
+        img.style.borderRadius = '2rem';
+        img.src = `${URL_IMAGE}${pelicula.poster_path}`;
+        img.alt = pelicula.title || 'Póster de la película';
+
+        section1.appendChild(div);
+        div.appendChild(img);
+
+    } catch (error) {
+        console.error('Error en la operación:', error.message);
+    }
+
+    try {
+        // Obtener película
+        const pelicula = await fetchData('/movie/107?language=es-ES');
+
+        // Mostrar imagen en el DOM
+        const section1 = document.getElementById('section1');
+        const div = document.createElement('div');
+        const img = document.createElement('img');
+
+        img.style.borderRadius = '2rem';
+        img.src = `${URL_IMAGE}${pelicula.poster_path}`;
+        img.alt = pelicula.title || 'Póster de la película';
+
+        section1.appendChild(div);
+        div.appendChild(img);
+
+    } catch (error) {
+        console.error('Error en la operación:', error.message);
+    }
+
+    try {
+        // Obtener película
+        const pelicula = await fetchData('/movie/108?language=es-ES');
+
+        // Mostrar imagen en el DOM
+        const section1 = document.getElementById('section1');
+        const div = document.createElement('div');
+        const img = document.createElement('img');
+
+        img.style.borderRadius = '2rem';
+        img.src = `${URL_IMAGE}${pelicula.poster_path}`;
+        img.alt = pelicula.title || 'Póster de la película';
+
+        section1.appendChild(div);
+        div.appendChild(img);
+
     } catch (error) {
         console.error('Error en la operación:', error.message);
     }
