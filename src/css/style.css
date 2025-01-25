@@ -178,7 +178,7 @@
     font-display: swap;
 }
 
-/*******************************************************************************************************/
+/********************************** GLOBAL **********************************/
 
 * {
     box-sizing: border-box;
@@ -239,17 +239,21 @@ header {
     font-family: 'Roboto';
     color: var(--50);
     grid-template-columns: 0.3fr 1fr 0.3fr;
-    padding: 1rem;
+    padding: 0.5rem;
     align-items: center;
 }
 
 header div {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
     margin-left: 1.5rem;
     font-size: 1.5rem;
-    color: deeppink;
+    color: var(--50);
+}
+
+header div p {
+    font-size: 42px;
+    margin-bottom: 0.5rem;
 }
 
 nav ul {
@@ -263,7 +267,7 @@ nav ul {
 nav a {
     display: inline-block;
     transform-origin: center center;
-    color: var(--50);
+    color: var(--200);
     text-decoration: none;
     will-change: transform;
 }
@@ -280,12 +284,46 @@ main {
     background-color: var(--950);
 }
 
+article {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
 .section1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    max-width: 1920px;
+    margin: 3rem auto 0 auto;
 }
 
 footer {
     background-color: var(--950);
+}
+
+/****************************** RESPONSIVE ******************************/
+
+@media (max-width: 600px) {
+    .section1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    img {
+        height: 700px;
+    }
+
+    header {
+        display: flex;
+        font-family: 'Roboto';
+        color: var(--50);
+        padding: 0.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header div {
+        margin: 0;
+    }
 }
